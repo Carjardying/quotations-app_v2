@@ -1,18 +1,21 @@
 // etape 4
-const citationInput = document.getElementById("citation");
+const citationInput = document.getElementById("citation"); //je récupère tout mes éléments du html
 const authorInput = document.getElementById("author-name");
 const submitButton = document.getElementById("submit-button");
 const quoteList = document.getElementById("quote-list");
 
 submitButton.addEventListener("click", () => {
   //j'appelle la const submitButton après l'avoir récupéré via le getElementById
+
   const text = citationInput.value;
   const author = authorInput.value;
 
   addQuotes(text, author); //fin étape 5 avec paramettres des input
+  
+  //   preventDefault(); // empèche le rechargement mais noté deprecié quand utilisé
 
   //   alert(`citation : ${text} nom de l'auteur: ${author}`); //redemander à clémentine pour le pas à pas dans le debugger
-  //   alert("nom de l'auteur: " + author); //concatener (+) et pas mettre une virgule sinon plusieurs arguments
+  //   alert("nom de l'auteur: " + author); //mieux que console.log car pas de debugger
 });
 
 function addQuotes(quote, author) {
